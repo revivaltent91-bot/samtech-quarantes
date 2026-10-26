@@ -1,0 +1,472 @@
+export type Pole =
+  | 'KARABA'
+  | 'KOF Corporation'
+  | 'TÉPÉ'
+  | 'Quarantes Studio';
+
+export const POLES: Pole[] = [
+  'KARABA',
+  'KOF Corporation',
+  'TÉPÉ',
+  'Quarantes Studio',
+];
+
+export type ArticleBlock =
+  | { type: 'paragraph'; text: string }
+  | { type: 'heading'; level: 2 | 3; text: string }
+  | { type: 'list'; items: string[]; ordered?: boolean }
+  | { type: 'quote'; text: string; author?: string }
+  | { type: 'table'; caption?: string; headers: string[]; rows: string[][] }
+  | { type: 'code'; language?: string; code: string }
+  | { type: 'image'; src: string; alt: string; caption?: string }
+  | { type: 'cta'; text: string; href: string; label: string };
+
+export interface Author {
+  name: string;
+  role: string;
+  pole: Pole;
+}
+
+export interface Article {
+  slug: string;
+  title: string;
+  pole: Pole;
+  excerpt: string;
+  heroImage: string;
+  publishedAt: string;
+  readTime: number;
+  author: Author;
+  featured?: boolean;
+  blocks: ArticleBlock[];
+}
+
+export function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/['’]/g, '')
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/[\s-]+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
+export function formatDate(iso: string): string {
+  return new Date(iso).toLocaleDateString('fr-FR', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+}
+
+export function getArticle(slug: string, source: Article[] = FALLBACK_ARTICLES): Article | undefined {
+  return source.find((a) => a.slug === slug);
+}
+
+export function getHeadings(article: Article): { id: string; text: string; level: 2 | 3 }[] {
+  return article.blocks
+    .filter((b) => b.type === 'heading')
+    .map((b) => b as { type: 'heading'; level: 2 | 3; text: string })
+    .map((b) => ({ id: slugify(b.text), text: b.text, level: b.level }));
+}
+
+export function getRelatedArticles(
+  source: Article[],
+  article: Article,
+  limit = 3
+): Article[] {
+  const samePole = source.filter(
+    (a) => a.slug !== article.slug && a.pole === article.pole
+  );
+  const others = source.filter(
+    (a) => a.slug !== article.slug && a.pole !== article.pole
+  );
+  return [...samePole, ...others].slice(0, limit);
+}
+
+/**
+ * Jeu de données de secours utilisé si l'API n'est pas joignable.
+ * La source de vérité est la base de données (endpoints /api/articles).
+ */
+export const FALLBACK_ARTICLES: Article[] = [
+  {
+    slug: 'karaba-os-dernier-kilometre',
+    title: 'KARABA OS : le dernier kilomètre réinventé par l\'IA agentique',
+    pole: 'KARABA',
+    featured: true,
+    excerpt:
+      'Comment des agents IA intégrés à la messagerie transforment la logistique de distribution en Afrique, offline-friendly et à l\'échelle.',
+    heroImage:
+      'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2000&auto=format&fit=crop',
+    publishedAt: '2026-09-02',
+    readTime: 8,
+    author: { name: 'Afi Adjamagbo', role: 'Head of Product, KARABA OS', pole: 'KARABA' },
+    blocks: [
+      {
+        type: 'paragraph',
+        text: 'Le dernier kilomètre reste le maillon le plus coûteux et le plus opaque des chaînes logistiques africaines. Entre routes dégradées, adresses non structurées et outils de gestion inadaptés, une part majeure de la valeur est absorbée par l\'inefficacité. C\'est exactement le problème que KARABA OS attaque.',
+      },
+      { type: 'heading', level: 2, text: 'Une interface là où vivent déjà les acteurs' },
+      {
+        type: 'paragraph',
+        text: 'Plutôt que d\'imposer une application à installer, KARABA OS opère dans la messagerie — WhatsApp en premier lieu — là où commerçants, transporteurs et clients échangent déjà quotidiennement. Un agent IA s\'insère dans la conversation, interprète la commande en langage naturel et orchestre la tournée.',
+      },
+      {
+        type: 'list',
+        items: [
+          'Commande et facturation en langage naturel, sans formulaire',
+          'Affectation automatique aux transporteurs selon charge et géolocalisation',
+          'Preuve de livraison par photo horodatée dès l\'arrivée à destination',
+          'Réconciliation des paiements mobile money en fin de journée',
+        ],
+      },
+      {
+        type: 'quote',
+        text: 'L\'infrastructure ne se déploie pas dans le vide : elle épouse les outils que les gens utilisent déjà.',
+        author: 'Équipe produit KARABA',
+      },
+      { type: 'heading', level: 2, text: 'Ce que l\'IA agentique change concrètement' },
+      {
+        type: 'table',
+        caption: 'Logistique du dernier kilomètre : avant / après KARABA OS',
+        headers: ['Dimension', 'Sans agent', 'Avec agent KARABA'],
+        rows: [
+          ['Saisie de commande', 'Manuelle, ~4 min', 'Conversationnelle, <1 min'],
+          ['Visibilité tournée', 'Aucune', 'Temps réel, nœud par nœud'],
+          ['Coût de distribution', 'Élevé et variable', 'Modélisé et optimisé'],
+          ['Dépendance réseau', 'Forte', 'Mode hors-ligne tolérant'],
+        ],
+      },
+      { type: 'heading', level: 2, text: 'Vers le Système d\'Exploitation de l\'économie réelle' },
+      {
+        type: 'paragraph',
+        text: 'Le dernier kilomètre n\'est qu\'une porte d\'entrée. Les mêmes agents peuvent gérer le sourcing, le crédit de stock ou la relation revendeur. KARABA OS s\'agrège progressivement en un OS transverse — l\'ambition même de QUARANTES Holding.',
+      },
+      {
+        type: 'cta',
+        text: 'Vous souhaitez déployer KARABA OS sur une de vos zones de distribution ?',
+        href: '/careers',
+        label: 'Rejoindre l\'écosystème',
+      },
+    ],
+  },
+  // {
+  //   slug: 'agents-ia-messagerie',
+  //   title: 'Agents IA dans WhatsApp : quand la messagerie devient infrastructure',
+  //   pole: 'KARABA',
+  //   excerpt:
+  //     'La messagerie est le point d\'entrée numérique le plus répandu du continent. Retour sur la décision d\'en faire la couche d\'interaction de KARABA OS.',
+  //   heroImage:
+  //     'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2000&auto=format&fit=crop',
+  //   publishedAt: '2026-07-14',
+  //   readTime: 6,
+  //   author: { name: 'Komi Sénam', role: 'Lead Engineer, KARABA OS', pole: 'KARABA' },
+  //   blocks: [
+  //     {
+  //       type: 'paragraph',
+  //       text: 'Le smartphone n\'est plus l\'exception mais la norme. Pourtant, les usages restent concentrés sur quelques applications — et la messagerie domine. Construire une infrastructure logistique qui ignore ce fait revient à construire un réseau routier sans voir les villes.',
+  //     },
+  //     { type: 'heading', level: 2, text: 'Pourquoi la messagerie, et pas une app' },
+  //     {
+  //       type: 'list',
+  //       items: [
+  //         'Zéro friction d\'installation et de mise à jour',
+  //         'Confiance déjà établie avec le client final',
+  //         'Faible empreinte mémoire sur les terminaux d\'entrée de gamme',
+  //         'Capacité à fonctionner en réseau limité avec file d\'attente locale',
+  //       ],
+  //     },
+  //     {
+  //       type: 'quote',
+  //       text: 'Nous ne concurrençons pas WhatsApp. Nous le considérons comme infrastructure — exactement comme un opérateur considère la route.',
+  //     },
+  //     { type: 'heading', level: 2, text: 'Souveraineté et données' },
+  //     {
+  //       type: 'paragraph',
+  //       text: 'Interroger la messagerie ne signifie pas y stocker les données sensibles. Les informations commerciales restent dans l\'infrastructure souveraine de QUARANTES, en conformité avec les règles de souveraineté des données défendues par le groupe.',
+  //     },
+  //     {
+  //       type: 'cta',
+  //       text: 'L\'IA agentique vous intéresse pour votre propre opération ?',
+  //       href: '/insights',
+  //       label: 'Explorer nos publications',
+  //     },
+  //   ],
+  // },
+  // {
+  //   slug: 'edge-computing-afrique',
+  //   title: 'Edge Computing : calculer au plus près de l\'action, sans dépendance au cloud',
+  //   pole: 'KOF Corporation',
+  //   excerpt:
+  //     'Serveurs durcis, capteurs IoT, maintenance prédictive : comment l\'infrastructure Hard de KOF Corporation libère l\'IA de la connectivité permanente.',
+  //   heroImage:
+  //     'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2000&auto=format&fit=crop',
+  //   publishedAt: '2026-06-20',
+  //   readTime: 7,
+  //   author: { name: 'Claude Mensah', role: 'CTO, KOF Corporation', pole: 'KOF Corporation' },
+  //   blocks: [
+  //     {
+  //       type: 'paragraph',
+  //       text: 'Le cloud est une promesse, pas une panacée. Dans des zones où la bande passante est rare et coûteuse, déporter chaque inférence vers un datacenter distant est techniquement fragile et économiquement absurde. L\'edge computing inverse la logique : le calcul se rapproche du capteur.',
+  //     },
+  //     { type: 'heading', level: 2, text: 'Une usine de l\'infrastructure physique' },
+  //     {
+  //       type: 'paragraph',
+  //       text: 'KOF Corporation conçoit et assemble des serveurs Edge durcis — poussière, chaleur, coupures électriques — et les déploie au plus près des sites industriels. Les modèles IA tournent localement, les décisions critiques ne dépendent plus d\'un aller-retour réseau.',
+  //     },
+  //     {
+  //       type: 'list',
+  //       items: [
+  //         'Maintenance prédictive sur équipements industriels sans cloud permanent',
+  //         'Vision par ordinateur embarquée pour le contrôle qualité',
+  //         'Gateway IoT fédérant capteurs et actionneurs à l\'échelle d\'un site',
+  //         'Synchronisation différée vers le cloud quand la connexion le permet',
+  //       ],
+  //     },
+  //     { type: 'heading', level: 2, text: 'Aucune donnée centrale, aucun point de défaillance unique' },
+  //     {
+  //       type: 'paragraph',
+  //       text: 'En traitant les données sensibles sur site, l\'edge répond aussi à une exigence de souveraineté. L\'usine garde la maîtrise de ses données, et l\'infrastructure reste opérationnelle même en cas de panne partielle du réseau.',
+  //     },
+  //     {
+  //       type: 'code',
+  //       language: 'bash',
+  //       code: '# Exemple : inference locale d\'un modèle de maintenance prédictive\ndefect_predictor = load_model("models/vibration-v1.onnx")\nwhile site_online:\n    signal = iot_gateway.read("pump-3")\n    risk = defect_predictor(signal)\n    if risk > 0.85:\n        dispatch_alert("maintenance", pump=3, reason=risk)',
+  //     },
+  //     {
+  //       type: 'cta',
+  //       text: 'Concevoir ces infrastructures exige des ingénieurs de terrain.',
+  //       href: '/careers',
+  //       label: 'Postuler chez KOF',
+  //     },
+  //   ],
+  // },
+  // {
+  //   slug: 'jumeaux-numeriques-gouvernance',
+  //   title: 'Jumeaux numériques et décision institutionnelle',
+  //   pole: 'TÉPÉ',
+  //   excerpt:
+  //     'Comment TÉPÉ INTELLIGENCE outille les gouvernements et institutions avec des jumeaux numériques pour éclairer les arbitrages budgétaires.',
+  //   heroImage:
+  //     'https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=2000&auto=format&fit=crop',
+  //   publishedAt: '2026-05-28',
+  //   readTime: 7,
+  //   author: { name: 'Nadia Soglo', role: 'Directrice Stratégie, TÉPÉ', pole: 'TÉPÉ' },
+  //   blocks: [
+  //     {
+  //       type: 'paragraph',
+  //       text: 'Décider pour une nation, c\'est décider dans l\'incertitude. Quelles ressources allouer au réseau de santé ? À l\'énergie ? À l\'éducation ? TÉPÉ INTELLIGENCE construit des jumeaux numériques qui modélisent ces systèmes avant décision.',
+  //     },
+  //     { type: 'heading', level: 2, text: 'Un laboratoire de la décision publique' },
+  //     {
+  //       type: 'paragraph',
+  //       text: 'Un jumeau numérique réunit données administratives, démographiques et économiques dans une simulation interactive. Le décideur teste des scénarios d\'allocation, observe les effets secondaires, et arbitre avec une visibilité inédite.',
+  //     },
+  //     {
+  //       type: 'table',
+  //       caption: 'Scénarios testés sur un jumeau territorial',
+  //       headers: ['Scénario', 'Coût initial', 'Impact social simulé'],
+  //       rows: [
+  //         ['Renforcement réseau de santé primaire', '240 M USD', '+18% couverture'],
+  //         ['Transport urbain', '180 M USD', '+12% mobilité'],
+  //         ['Éducation numérique', '150 M USD', '+9% accès secondaire'],
+  //       ],
+  //     },
+  //     { type: 'heading', level: 2, text: 'De la donnée à la confiance' },
+  //     {
+  //       type: 'paragraph',
+  //       text: 'La puissance de ces outils repose sur la qualité et la souveraineté des données utilisées. TÉPÉ travaille avec des institutions partenaires pour garantir provenance, actualisation et traçabilité de chaque source.',
+  //     },
+  //     {
+  //       type: 'quote',
+  //       text: 'L\'intelligence institutionnelle ne remplace pas le discernement des décideurs : elle le rend pleinement informé.',
+  //     },
+  //     {
+  //       type: 'cta',
+  //       text: 'Institution publique ou gouvernement, discutons de votre cas d\'usage.',
+  //       href: '/careers',
+  //       label: 'Nous contacter',
+  //     },
+  //   ],
+  // },
+  // {
+  //   slug: 'ia-agentique-faible-connectivite',
+  //   title: 'IA agentique dans les environnements à faible connectivité',
+  //   pole: 'Quarantes Studio',
+  //   excerpt:
+  //     'Design patterns pour concevoir des agents autonomes qui décident en réseau dégradé, se synchronisent en différé et restent audités.',
+  //   heroImage:
+  //     'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2000&auto=format&fit=crop',
+  //   publishedAt: '2026-08-19',
+  //   readTime: 9,
+  //   author: { name: 'Dr Yao Kossi', role: 'Senior AI Research Scientist', pole: 'Quarantes Studio' },
+  //   blocks: [
+  //     {
+  //       type: 'paragraph',
+  //       text: 'La majorité des architectures d\'agents présupposent une connectivité continue : tokens, appels d\'API, latence faible. Sur le terrain africain, cette hypothèse tient rarement. Chez Quarantes Studio, nous concevons des agents qui assument l\'intermittence.',
+  //     },
+  //     { type: 'heading', level: 2, text: 'Trois principes d\'architecture' },
+  //     { type: 'heading', level: 3, text: '1. Décider localement, négocier globalement' },
+  //     {
+  //       type: 'paragraph',
+  //       text: 'L\'agent exécute un plan local réversible avec les moyens du bord. Ce n\'est qu\'en cas de divergence critique qu\'il sollicite le niveau central — jamais pour une action routinière.',
+  //     },
+  //     { type: 'heading', level: 3, text: '2. Une file d\'intention hors-ligne' },
+  //     {
+  //       type: 'paragraph',
+  //       text: 'Chaque action est écrite dans une file locale persisted. À la reconnexion, la file est rejouée, conflictée et reconciliée. L\'utilisateur garde une trace déterministe de ce que l\'agent a fait.',
+  //     },
+  //     { type: 'heading', level: 3, text: '3. Un budget de confiance' },
+  //     {
+  //       type: 'paragraph',
+  //       text: 'Tout agent dispose d\'un budget d\'autonomie configurables : pourcentage de décisions déléguées, montant maximal d\'une transaction hors validation humaine, horizon temporel de reconnexion.',
+  //     },
+  //     {
+  //       type: 'code',
+  //       language: 'ts',
+  //       code: "type AgentConfig = {\n  autonomyBudget: number;      // % de décisions déléguées\n  maxTxnWithoutCheck: number;\n  syncPolicy: 'eager' | 'lazy' | 'hybrid';\n  rollback: boolean;\n};\n\nconst edgeAgent = createAgent({\n  autonomyBudget: 0.85,\n  maxTxnWithoutCheck: 250,\n  syncPolicy: 'hybrid',\n  rollback: true,\n});",
+  //     },
+  //     {
+  //       type: 'cta',
+  //       text: 'Ces recherches sont menées au sein de Quarantes Studio.',
+  //       href: '/careers',
+  //       label: 'Rejoindre la R&D',
+  //     },
+  //   ],
+  // },
+  // {
+  //   slug: 'recherche-fondamentale-afrique',
+  //   title: 'Produire de la recherche fondamentale depuis le continent',
+  //   pole: 'TÉPÉ',
+  //   excerpt:
+  //     'Pourquoi la prochaine frontière de l\'IA se joue aussi dans les laboratoires africains, et comment Quarantes Studio y contribue.',
+  //   heroImage:
+  //     'https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=2000&auto=format&fit=crop',
+  //   publishedAt: '2026-04-10',
+  //   readTime: 6,
+  //   author: { name: 'Dr Ama Eklou', role: 'Research Lead, Quarantes Studio', pole: 'R&D' },
+  //   blocks: [
+  //     {
+  //       type: 'paragraph',
+  //       text: 'La recherche fondamentale en IA est encore trop souvent pensée dans une géographie unique. Or les contraintes africaines — connectivité, coût énergétique, langues locales — sont autant de terrains fertiles pour des contributions inédites.',
+  //     },
+  //     { type: 'heading', level: 2, text: 'Des problèmes, pas des adaptations' },
+  //     {
+  //       type: 'list',
+  //       items: [
+  //         'Compression de modèles pour hardware raisonnable en coût',
+  //         'Navigation autonome en environnements non balisés',
+  //         'Traitement du langage sur langues peu dotées',
+  //         'Inférence économe en énergie sur batteries intermittentes',
+  //       ],
+  //     },
+  //     {
+  //       type: 'quote',
+  //       text: 'La recherche ne se mesure pas au nombre de GPU, mais au nombre de problèmes réels correctement modélisés.',
+  //     },
+  //     { type: 'heading', level: 2, text: 'De la publication à l\'exécution' },
+  //     {
+  //       type: 'paragraph',
+  //       text: 'Nos résultats ne restent pas dans les tiroirs. Ils alimentent directement KARABA OS, les infrastructures KOF et les modèles TÉPÉ. C\'est la boucle complète qui fait la spécificité de QUARANTES.',
+  //     },
+  //     {
+  //       type: 'cta',
+  //       text: 'Thèse, postdoc ou appétit pour la recherche appliquée ?',
+  //       href: '/careers',
+  //       label: 'Voir les postes R&D',
+  //     },
+  //   ],
+  // },
+  // {
+  //   slug: 'ia-economie-reelle-africaine',
+  //   title: 'L\'IA au service de l\'économie réelle africaine : un cadre d\'action',
+  //   pole: 'KARABA',
+  //   excerpt:
+  //     'Associer puissance algorithmique souveraine et ingénierie de terrain : le cadre stratégique qui guide tout l\'écosystème QUARANTES.',
+  //   heroImage:
+  //     'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2000&auto=format&fit=crop',
+  //   publishedAt: '2026-03-05',
+  //   readTime: 8,
+  //   author: { name: 'Efo Hounkpatin', role: 'Managing Partner', pole: 'Vision' },
+  //   blocks: [
+  //     {
+  //       type: 'paragraph',
+  //       text: 'L\'économie réelle africaine — agriculture, logistique, distribution, industrie, services publics — reste largement sous-équipée en outils numériques. L\'enjeu n\'est pas d\'ajouter des apps, mais de brancher une intelligence sur les flux physiques existants.',
+  //     },
+  //     { type: 'heading', level: 2, text: 'Quatre principes directeurs' },
+  //     {
+  //       type: 'list',
+  //       items: [
+  //         'Souveraineté : les données critiques restent sous contrôle local ou continental',
+  //         'Exécution : la stratégie descend jusqu\'au circuit imprimé et au véhicule de livraison',
+  //         'Économie : chaque investissement technologique doit avoir un ROI mesurable',
+  //         'Institution : les décisions publiques méritent des outils de même niveau que les meilleurs acteurs privés',
+  //       ],
+  //     },
+  //     { type: 'heading', level: 2, text: 'Soft et Hard : une même chaîne de valeur' },
+  //     {
+  //       type: 'paragraph',
+  //       text: 'Un modèle d\'IA sans infrastructure de déploiement reste une promesse ; une infrastructure sans intelligence reste du métal. C\'est la convergence volontaire de ces deux mondes qui produit un système — pas une collection de produits.',
+  //     },
+  //     {
+  //       type: 'table',
+  //       caption: 'Continuité Soft ↔ Hard dans l\'écosystème',
+  //       headers: ['Couche', 'Soft', 'Hard'],
+  //       rows: [
+  //         ['Données', 'Modèles, agents, jumeaux', 'Serveurs Edge, capteurs, actionneurs'],
+  //         ['Déploiement', 'API et messagerie', 'Mécatronique et imprimerie 3D'],
+  //         ['Gouvernance', 'ISO 42001, audit IA', 'Sécurité physique des sites'],
+  //       ],
+  //     },
+  //     {
+  //       type: 'cta',
+  //       text: 'Ce cadre anime chacun de nos pôles.',
+  //       href: '/insights',
+  //       label: 'Découvrir nos pôles',
+  //     },
+  //   ],
+  // },
+  // {
+  //   slug: 'convergence-hard-soft',
+  //   title: 'Du boardroom au terrain : pourquoi la convergence Hard & Soft est décisive',
+  //   pole: 'KOF Corporation',
+  //   excerpt:
+  //     'Les projets IA échouent souvent à l\'exécution. Analyse de l\'angle mort qui sépare la stratégie de comité de direction du terrain physique.',
+  //   heroImage:
+  //     'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2000&auto=format&fit=crop',
+  //   publishedAt: '2026-07-30',
+  //   readTime: 7,
+  //   author: { name: 'Dr Koffi Anani', role: 'Directeur Conseil, QUARANTES', pole: 'Vision' },
+  //   blocks: [
+  //     {
+  //       type: 'paragraph',
+  //       text: 'La plupart des initiatives IA échouent à l\'étape de l\'exécution : anticiper les modèles est une chose, les faire fonctionner dans la poussière, la chaleur et les coupures en est une autre. C\'est cet angle mort que la convergence Hard & Soft adresse.',
+  //     },
+  //     { type: 'heading', level: 2, text: 'Le boardroom ne voit pas le terrain' },
+  //     {
+  //       type: 'paragraph',
+  //       text: 'Un comité de direction valide une stratégie à partir de projections. Mais aucune projection ne remplace un test sur site : connectivité réelle, habitudes des équipes, contraintes réglementaires. La convergence impose de valider l\'hypothèse conductrice au plus près de son usage.',
+  //     },
+  //     {
+  //       type: 'quote',
+  //       text: 'La stratégie sans exécution n\'est qu\'une présentation. L\'exécution sans stratégie n\'est qu\'un bricolage.',
+  //     },
+  //     { type: 'heading', level: 2, text: 'Comment nous opérons la convergence' },
+  //     {
+  //       type: 'list',
+  //       items: [
+  //         'Diagnostic terrain avant toute architecture (connectivité, énergie, usages)',
+  //         'Prototypage rapide : impression 3D et mécatronique pour valider le matériel',
+  //         'Pilotage court avec indicateurs mesurés sur site, pas seulement en salle',
+  //         'Transfert de compétences aux équipes locales dès le déploiement',
+  //       ],
+  //     },
+  //     {
+  //       type: 'cta',
+  //       text: 'Un enjeu de stratégie IA complexe à traiter ?',
+  //       href: '/careers',
+  //       label: 'Discuter avec nos experts',
+  //     },
+  //   ],
+  // },
+];

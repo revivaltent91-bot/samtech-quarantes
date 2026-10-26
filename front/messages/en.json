@@ -1,0 +1,314 @@
+{
+  "nav": {
+    "vision": "Vision",
+    "ecosystem": "Ecosystem",
+    "projects": "Our Projects",
+    "insights": "Insights",
+    "careers": "Careers",
+    "investorRelations": "Investor Relations",
+    "closeMenu": "Close menu",
+    "openMenu": "Open menu",
+    "homeAriaLabel": "QUARANTES Holding — Home",
+    "mainNavAriaLabel": "Main navigation"
+  },
+  "footer": {
+    "tagline": "Hard & Soft AI consulting firm for Africa\u2019s real economy.",
+    "headline": "Let\u2019s build the future together.",
+    "contactUs": "Contact us",
+    "ecosystemTitle": "Ecosystem",
+    "quarantesCabinet": "QUARANTES",
+    "quarantesCabinetLabel": "(Advisory firm)",
+    "holdingTitle": "Holding",
+    "investorRelations": "Investor Relations",
+    "comingSoon": "Coming soon",
+    "governanceISO": "Governance & ISO",
+    "careers": "Careers",
+    "projects": "Our Projects",
+    "insights": "Insights",
+    "secureContact": "Secure Contact",
+    "inPreparation": "In preparation",
+    "copyright": "All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "legalNotices": "Legal Notices",
+    "dataSecurity": "Data Security",
+    "linkedinAriaLabel": "QUARANTES on LinkedIn",
+    "whatsappAriaLabel": "Contact on WhatsApp",
+    "footerNavAriaLabel": "Footer links",
+    "legalNavAriaLabel": "Legal links"
+  },
+  "hero": {
+    "badge": "AI Expertise & Consulting Firm",
+    "h1Line1": "Master AI.",
+    "h1Line2Prefix": "From Strategy to ",
+    "h1Line2Excecution": "Execution.",
+    "p": "We deploy end-to-end AI, combining sovereign algorithmic power (Soft) with field-deployed cutting-edge engineering (Hard), to tackle Africa\u2019s most complex challenges.",
+    "forWhoLabel": "For whom:",
+    "forWhoInstitutions": "Public institutions",
+    "forWhoIndustrialists": "Industrialists",
+    "forWhoLogistics": "Logistics & Supply Chain",
+    "forWhoInvestors": "Investors",
+    "ctaWorkshop": "Book an AI workshop",
+    "ctaEcosystem": "Explore the group ecosystem"
+  },
+  "audience": {
+    "heading": "Who we work for",
+    "sub": "Spot yourself in our main client families at a glance.",
+    "items": [
+      {
+        "title": "Institutions & Governance",
+        "desc": "Digital transformation, data-informed public policy, sovereign security.",
+        "points": ["Predictive analytics", "Data sovereignty", "Economic modeling"],
+        "cta": "See how we help you",
+        "ariaLabel": "Services for Institutions & Governance"
+      },
+      {
+        "title": "Industry & Operations",
+        "desc": "Predictive maintenance, production line optimization through Artificial Intelligence and mechatronics.",
+        "points": ["Industrial IoT", "Computer vision", "Edge AI"],
+        "cta": "See how we help you",
+        "ariaLabel": "Services for Industry & Operations"
+      },
+      {
+        "title": "Logistics & Supply Chain",
+        "desc": "Real-time orchestration, informal fleets and last-mile optimization.",
+        "points": ["Real-time tracking", "AI agents", "Route optimization"],
+        "cta": "See how we help you",
+        "ariaLabel": "Services for Logistics & Supply Chain"
+      },
+      {
+        "title": "Investors & Partners",
+        "desc": "Technology due diligence, market analysis and strategic capital deployment.",
+        "points": ["Venture Building", "Tech Assessment", "Impact ROI"],
+        "cta": "See how we help you",
+        "ariaLabel": "Services for Investors & Partners"
+      }
+    ]
+  },
+  "pillars": {
+    "heading": "The Group Architecture",
+    "sub": "Four synergistic pillars where the physical world meets the cognitive world under unified strategic governance.",
+    "exploreLabel": "Explore the pillar",
+    "ariaLabel": "Explore the pillar"
+  },
+  "convergence": {
+    "heading": "The Convergence",
+    "headingGold": "Hard & Soft",
+    "kicker": "What sets us apart from purely software AI firms.",
+    "p": "We master the chain end to end. From algorithms (Soft) to the physical infrastructure that runs them in the field (Hard).",
+    "points": [
+      {"title": "Governance & Security", "desc": "ISO 42001 compliance, data sovereignty and highly secure infrastructures."},
+      {"title": "Edge Computing", "desc": "Deploying AI models close to the action, without cloud dependency."},
+      {"title": "Physical Engineering", "desc": "Rapid prototyping, 3D printing and mechatronics via KOF Corporation."}
+    ],
+    "placeholderLabel": "Hard/Soft architecture diagram",
+    "placeholderDesc": "(Future diagram illustrating cloud-to-mechatronics integration)"
+  },
+  "impact": {
+    "heading": "Impact at Scale",
+    "sub": "Solutions deployed to transform Africa\u2019s critical sectors.",
+    "approachLabel": "Approach",
+    "impactLabel": "Impact",
+    "cases": [
+      {
+        "pole": "KARABA OS",
+        "title": "Last-Mile Logistics",
+        "approach": "Route optimization and informal fleet orchestration via AI agents directly embedded in WhatsApp.",
+        "impact": "Unified real-time supply chain visibility and reduced delivery delays."
+      },
+      {
+        "pole": "KOF CORPORATION",
+        "title": "Deeptech Infrastructure",
+        "approach": "Deployment of ruggedized Edge servers and smart IoT sensors for data processing in industrial settings.",
+        "impact": "More reliable predictive maintenance without depending on a permanent cloud connection."
+      },
+      {
+        "pole": "TÉPÉ INTELLIGENCE",
+        "title": "Strategic Decisions",
+        "approach": "Building digital twins and institutional analytics to inform public and educational decision-makers.",
+        "impact": "Optimized budget allocation and predictive monitoring of policy impact."
+      }
+    ]
+  },
+  "reach": {
+    "heading": "Operational",
+    "headingGold": "Network",
+    "sub": "An engineering and advisory presence rooted in Africa, designed to integrate with global standards."
+  },
+  "socialProof": {
+    "heading": "The State-of-the-Art Standard",
+    "p": "Our solutions rely on the most stringent technology and security standards, guaranteeing absolute trust for critical actors.",
+    "standardsTitle": "Standards & Infra",
+    "trustTitle": "They trust us",
+    "logos": ["Institution Logo", "Industrial Client Logo", "Partner Logo"]
+  },
+  "why": {
+    "heading": "Why work with",
+    "headingGold": "QUARANTES?",
+    "sub": "What makes QUARANTES a unique partner for your Hard & Soft AI transformations.",
+    "reasons": [
+      {
+        "title": "Systemic Vision: Africa & Global",
+        "points": ["Understanding of local socio-economic dynamics.", "Alignment with international technology standards.", "Designed for Boards of Directors and strategic decision-makers."]
+      },
+      {
+        "title": "From Boardroom to Field",
+        "points": ["Strategy validated at board level.", "Guaranteed, measurable operational execution.", "Physical deployment of sensors and infrastructure."]
+      },
+      {
+        "title": "Governance & Compliance",
+        "points": ["AI security and ethics (ISO 42001) \u2018by design\u2019.", "Protection of sensitive institutional data.", "Built to meet the requirements of governance committees."]
+      }
+    ]
+  },
+  "access": {
+    "heading": "Access & Pathways",
+    "sub": "Navigate our ecosystem based on your profile.",
+    "paths": [
+      {"title": "Visitor Access & Demo", "desc": "Test our AI sandboxes, explore the Tépé and Karaba demos.", "status": "Available", "available": true},
+      {"title": "Join Us (Careers)", "desc": "Discover our openings and build the future with QUARANTES.", "status": "Open", "available": true},
+      {"title": "Investor Relations", "desc": "Access financial reports and our strategic vision.", "status": "Coming soon", "available": false},
+      {"title": "API Documentation", "desc": "Integration resources for developers and partners.", "status": "In preparation", "available": false}
+    ]
+  },
+  "insights": {
+    "heroBadge": "Latest articles",
+    "h1Line1": "Our Ideas,",
+    "h1Gold": "Our Field",
+    "heroSub": "Hard & Soft AI analyses, pole field reports and a look at Africa\u2019s real economy. Our invisible infrastructure, explained.",
+    "whyPubsHeading": "Why our publications",
+    "whyPubsSub": "An editorial line serving technical proof, not marketing.",
+    "featuredLabel": "Featured",
+    "readTime": "min read",
+    "readArticle": "Read article",
+    "allArticlesHeading": "All articles",
+    "allArticlesSub": "Filter by ecosystem pole to explore a topic in depth.",
+    "noArticles": "No articles in this category yet.",
+    "loadMore": "Load more articles",
+    "articlesListAriaLabel": "Filter articles by pole",
+    "allFilter": "All"
+  },
+  "article": {
+    "home": "Home",
+    "insights": "Insights",
+    "tocTitle": "Table of contents",
+    "endCtaHeading": "Want to contribute to this work?",
+    "endCtaP": "Our publications are born in the field, but also in our labs. Join an ecosystem where technological boldness meets the realities of the African continent.",
+    "endCtaBtn": "Join QUARANTES",
+    "relatedHeading": "Related articles",
+    "allArticles": "All articles"
+  },
+  "projects": {
+    "eyebrow": "Our Achievements",
+    "h1Line1": "What we have",
+    "h1Gold": "concretely built",
+    "h1Sub": "Where the blog explains, this page proves with deliverables: the internal achievements of the KARABA, KOF Corporation, TÉPÉ and QUARANTES poles, with their maturity level and the method behind them.",
+    "statsProjects": "Delivered projects",
+    "statsProjectsDesc": "in real production",
+    "statsPoles": "Active poles",
+    "statsPolesDesc": "in the ecosystem",
+    "statsYears": "Years of execution",
+    "statsYearsDesc": "at the state of the art",
+    "statsCountries": "Countries covered",
+    "statsCountriesDesc": "field deployments",
+    "framingHeading": "What this page lets you assess",
+    "framingPoints": [
+      {"title": "Assess maturity", "desc": "Each status tells where an achievement stands: production, pilot, R&D or archived."},
+      {"title": "Measure transversality", "desc": "From executive consulting to mechatronics, one value chain Soft & Hard."},
+      {"title": "Understand our method", "desc": "Featured projects document our path: field challenge, technical approach, produced value."}
+    ],
+    "gridHeading": "Projects grid",
+    "gridSub": "Filter by pole. Confidential projects are flagged as such, without external links.",
+    "noProjects": "No projects in this pole yet.",
+    "allFilter": "All",
+    "projectsListAriaLabel": "Filter projects by pole",
+    "featuredHeading": "Featured projects",
+    "featuredEyeBrow": "How we proceed",
+    "featuredSub": "A selection of flagship achievements, told in three acts: the field challenge, the technical approach and the produced value.",
+    "ctaHeading": "A challenge close to what we build?",
+    "ctaP": "Each of our projects was born from a field problem. Tell us about yours: we will build the intelligence and infrastructure to address it.",
+    "ctaBtn": "Start a discussion"
+  },
+  "projectCard": {
+    "confidential": "Confidential",
+    "publicResource": "Public resource",
+    "internalResource": "Internal resource",
+    "stackAriaLabel": "Technologies used",
+    "readFullArticle": "Read full article"
+  },
+  "featuredProjects": {
+    "challenge": "Challenge",
+    "approach": "Approach",
+    "value": "Produced value",
+    "challengeDesc": "The field problem to solve",
+    "approachDesc": "Our technical approach",
+    "valueDesc": "The impact measured in the field"
+  },
+  "careers": {
+    "heroBadge": "We are hiring",
+    "h1Line1": "Join the",
+    "h1Gold": "Ecosystem",
+    "heroSub": "Build Africa\u2019s invisible infrastructure. We are looking for brilliant minds to fuse hardware, software and strategic intelligence.",
+    "whyJoinHeading": "Why Join Us?",
+    "whyJoinKicker": "Don\u2019t just write code. Build the infrastructure of an entire continent.",
+    "whyJoinPoints": [
+      {
+        "title": "A Unique Mission:",
+        "p": "At QUARANTES, we don\u2019t build plain SaaS applications. We build the Operating System of Africa\u2019s real economy. Our mission is to digitize and optimize the vital, informal sectors that make the continent thrive."
+      },
+      {
+        "title": "State-of-the-Art Deeptech:",
+        "p": "You will work at the frontier of technological innovation. From designing agentic AI models (KARABA) to manufacturing Edge Computing hardware and mechatronics (KOF Corporation), you will take on unprecedented engineering challenges."
+      },
+      {
+        "title": "Tangible Impact:",
+        "p": "Your work will have direct, measurable ripple effects. Whether optimizing last-mile logistics, informing government decisions or securing critical data, you will actively contribute to Africa\u2019s technological and economic rise."
+      }
+    ],
+    "innovationRadical": "Radical Innovation",
+    "innovationRadicalDesc": "Join an ecosystem where technological boldness meets the realities of the African field.",
+    "rdBadge": "R&D Focus",
+    "rdHeading": "Quarantes Studio: The Frontier of Research",
+    "rdP": "Within Quarantes Studio, our innovation lab, Research & Development roles don\u2019t just follow trends: they create them.",
+    "rdPoints": [
+      {"title": "Agentic AI:", "p": "Designing autonomous architectures capable of making complex decisions in low-connectivity environments."},
+      {"title": "Edge AI & Mechatronics:", "p": "Integrating optimized LLM models directly onto embedded chips and fast-prototyping hardware solutions."},
+      {"title": "Foundational Research:", "p": "Publishing research papers and contributing to the global state of the art from the African continent."}
+    ],
+    "rdBtn": "Discover our R&D work",
+    "cultureHeading": "Our Culture",
+    "cultureSub": "Excellence is not an option, it\u2019s our standard.",
+    "culturePoints": [
+      {"title": "Excellence & Rigor", "desc": "We aim for world-class standards. Every line of code, every printed circuit must be flawless."},
+      {"title": "Continental Impact", "desc": "Our solutions transform the real economy. You\u2019re not building a gadget, you\u2019re building the future."},
+      {"title": "Hard/Soft Convergence", "desc": "We break down silos. AI engineers work hand in hand with mechatronics experts."}
+    ],
+    "openingsHeading": "Open Positions",
+    "openingsSub": "Discover opportunities within our various poles.",
+    "spontaneous": "Spontaneous Application",
+    "apply": "Apply",
+    "processHeading": "Recruitment Process",
+    "processSteps": [
+      {"title": "Application", "desc": "Submit your profile and achievements."},
+      {"title": "Culture Interview", "desc": "Meet our leaders to validate alignment."},
+      {"title": "Practical Case", "desc": "Technical evaluation on a real Deeptech problem."},
+      {"title": "Offer", "desc": "Proposal and integration into the ecosystem."}
+    ]
+  },
+  "localeSwitcher": {
+    "fr": "🇬🇧 EN → FR",
+    "en": "🇫🇷 FR → EN"
+  },
+  "meta": {
+    "homeTitle": "Hard & Soft AI firm for Africa",
+    "homeDescription": "QUARANTES Holding — End-to-end AI expertise and consulting. Strategy, Edge Computing, agentic logistics and institutional intelligence for Africa\u2019s economy.",
+    "insightsTitle": "Insights — Hard & Soft AI Analyses for Africa",
+    "insightsDescription": "QUARANTES Holding publications and analyses: R&D research, field reports from the KARABA, KOF Corporation and TÉPÉ poles, and strategic takes on AI applied to Africa\u2019s real economy.",
+    "projectsTitle": "Our Projects — Achievements of the QUARANTES poles",
+    "projectsDescription": "What the QUARANTES group has concretely built: internal achievements of the KARABA, KOF Corporation, TÉPÉ and QUARANTES poles, from AI strategy to Edge infrastructure.",
+    "careersTitle": "Careers — Join the QUARANTES Ecosystem",
+    "careersDescription": "Join QUARANTES Holding and build Africa\u2019s invisible infrastructure. Open positions in AI, Edge Computing, mechatronics and institutional intelligence."
+  },
+  "common": {
+    "minRead": "min"
+  }
+}

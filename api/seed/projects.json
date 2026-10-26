@@ -1,0 +1,153 @@
+[
+  {
+    "slug": "karaba-os-reseau-distribution",
+    "title": "KARABA OS — réseau de distribution de proximité",
+    "pole": "KARABA",
+    "status": "En Production",
+    "featured": true,
+    "description": "Système d'exploitation logistique connectant commerçants, transporteurs et clients via la messagerie, avec orchestration par agents IA.",
+    "stack": [
+      "Agents IA",
+      "WhatsApp API",
+      "Mobile money",
+      "FastAPI"
+    ],
+    "url": "https://karaba.dev",
+    "articleSlug": "karaba-os-dernier-kilometre",
+    "detail": {
+      "challenge": "Une chaîne de distribution fragmentée, sans visibilité sur les stocks ni les tournées, et une main-d'œuvre habituée à la messagerie plutôt qu'aux applications métier.",
+      "approach": "Intégration d'agents IA dans WhatsApp pour saisir commandes et affecter les tournées en langage naturel, avec file d'intention hors-ligne et réconciliation mobile money en fin de journée.",
+      "value": "Distribution opérationnelle 24/7, temps de saisie divisé par quatre et visibilité temps réel du dernier kilomètre sur l'ensemble de la zone pilote."
+    }
+  },
+  {
+    "slug": "karaba-agent-messagerie-retail",
+    "title": "Agents messagerie KARABA — pilote retail",
+    "pole": "KARABA",
+    "status": "Pilote",
+    "description": "Extension des agents KARABA OS à la relation revendeur : sourcing, crédit de stock et relances conversationnelles.",
+    "stack": [
+      "LLM agents",
+      "Queue offline",
+      "CRMs"
+    ]
+  },
+  {
+    "slug": "k-edge-serveur-durci",
+    "title": "Serveur Edge durci K-EDGE-1",
+    "pole": "KOF Corporation",
+    "status": "En Production",
+    "featured": true,
+    "description": "Unité de calcul Edge résistante à la poussière, la chaleur et l'intermittence électrique, déployée au plus près des sites industriels.",
+    "stack": [
+      "ARM",
+      "ONNX Runtime",
+      "IoT",
+      "Capteurs"
+    ],
+    "articleSlug": "edge-computing-afrique",
+    "detail": {
+      "challenge": "Les sites industriels africains subissent coupures fréquentes et conditions difficiles, rendant toute dépendance au cloud inacceptable pour les opérations critiques.",
+      "approach": "Conception et assemblage local d'un serveur durci hébergeant les modèles d'inference en local, avec synchronisation différée et supervision de site par gateway IoT.",
+      "value": "Maintenance prédictive et contrôle qualité fonctionnant jour et nuit sans connexion stable, avec un point de défaillance central éliminé."
+    }
+  },
+  {
+    "slug": "kof-ligne-mecatronique-3d",
+    "title": "Ligne de prototypage mécatronique 3D",
+    "pole": "KOF Corporation",
+    "status": "R&D",
+    "description": "Atelier interne d'impression 3D et d'assemblage de circuits pour accélérer le prototypage matériel des pôles.",
+    "stack": [
+      "Impression 3D",
+      "Circuits imprimés",
+      "CAO"
+    ]
+  },
+  {
+    "slug": "tepe-jumeau-numerique-territorial",
+    "title": "Jumeau numérique territorial",
+    "pole": "TÉPÉ",
+    "status": "Pilote",
+    "featured": true,
+    "description": "Simulation interactive d'un territoire pour tester l'allocation des budgets publics avant décision.",
+    "stack": [
+      "Simulation",
+      "SIG",
+      "Dataviz",
+      "API décisionnelle"
+    ],
+    "detail": {
+      "challenge": "Des arbitrages budgétaires réalisés dans l'incertitude, faute d'outil permettant d'anticiper les effets croisés d'une allocation.",
+      "approach": "Construction d'un jumeau numérique réunissant données administratives et démographiques, avec scénarios testables et indicateurs d'impact simulés.",
+      "value": "Un outil d'aide à la décision partagé entre directions, rendant les arbitrages plus transparents et mieux documentés."
+    }
+  },
+  {
+    "slug": "tepe-observatoire-donnees",
+    "title": "Observatoire des données institutionnelles",
+    "pole": "TÉPÉ",
+    "status": "R&D",
+    "description": "Collecte, fiabilisation et visualisation des données publiques pour alimenter les modèles d'intelligence institutionnelle.",
+    "stack": [
+      "ETL",
+      "Data warehouse",
+      "Gouvernance IA"
+    ]
+  },
+  {
+    "slug": "quarantes-conseil-strategie-ia",
+    "title": "Cabinet — mission de stratégie IA exécutive",
+    "pole": "QUARANTES",
+    "status": "En Production",
+    "featured": true,
+    "description": "Accompagnement de directions générales sur la feuille de route IA : diagnostic, architecture cible et exécution terrain.",
+    "stack": [
+      "Stratégie IA",
+      "Architecture",
+      "Governance"
+    ],
+    "detail": {
+      "challenge": "Des directions confrontées à l'écart entre promesses marketing de l'IA et déploiement réel dans des environnements contraints.",
+      "approach": "Diagnostic terrain systématique, définition d'une cible réaliste et gouvernance de projet avec indicateurs mesurés sur site.",
+      "value": "Des feuilles de route alignées sur le terrain, avec un ROI clarifié et une adhésion des équipes locales au déploiement."
+    }
+  },
+  {
+    "slug": "quarantes-conformite-iso-42001",
+    "title": "Programme de conformité ISO 42001",
+    "pole": "QUARANTES",
+    "status": "En Production",
+    "description": "Cadre de gouvernance et de management de l'IA appliqué à l'ensemble des pôles du groupe.",
+    "stack": [
+      "ISO 42001",
+      "Audit IA",
+      "Risk management"
+    ]
+  },
+  {
+    "slug": "deploiement-souverain-institution",
+    "title": "Déploiement souverain pour institution",
+    "pole": "QUARANTES",
+    "status": "Pilote",
+    "confidential": true,
+    "description": "Mise en place d'une infrastructure IA souveraine pour le compte d'une institution — contenu et périmètre non communicables.",
+    "stack": [
+      "Souveraineté",
+      "Edge",
+      "Conformité"
+    ]
+  },
+  {
+    "slug": "kof-gateway-iot-v0",
+    "title": "Gateway IoT v0 — unité embarquée",
+    "pole": "KOF Corporation",
+    "status": "Archivé",
+    "description": "Première génération de passerelle embarquée, remplacée par K-EDGE-1 : acquis techniques réinvestis dans la gamme actuelle.",
+    "stack": [
+      "ESP32",
+      "MQTT",
+      "Firmware"
+    ]
+  }
+]

@@ -1,0 +1,314 @@
+{
+  "nav": {
+    "vision": "Vision",
+    "ecosystem": "Écosystème",
+    "projects": "Nos Projets",
+    "insights": "Insights",
+    "careers": "Carrières",
+    "investorRelations": "Investor Relations",
+    "closeMenu": "Fermer le menu",
+    "openMenu": "Ouvrir le menu",
+    "homeAriaLabel": "QUARANTES Holding — Accueil",
+    "mainNavAriaLabel": "Navigation principale"
+  },
+  "footer": {
+    "tagline": "Cabinet IA Hard & Soft pour l\u2019économie réelle africaine.",
+    "headline": "Bâtissons l\u2019avenir ensemble.",
+    "contactUs": "Nous contacter",
+    "ecosystemTitle": "Écosystème",
+    "quarantesCabinet": "QUARANTES",
+    "quarantesCabinetLabel": "(Cabinet)",
+    "holdingTitle": "Holding",
+    "investorRelations": "Investor Relations",
+    "comingSoon": "Bientôt",
+    "governanceISO": "Gouvernance & ISO",
+    "careers": "Carrières",
+    "projects": "Nos Projets",
+    "insights": "Insights",
+    "secureContact": "Contact Sécurisé",
+    "inPreparation": "En préparation",
+    "copyright": "Tous droits réservés.",
+    "privacyPolicy": "Politique de Confidentialité",
+    "legalNotices": "Mentions Légales",
+    "dataSecurity": "Sécurité des Données",
+    "linkedinAriaLabel": "QUARANTES sur LinkedIn",
+    "whatsappAriaLabel": "Contact WhatsApp",
+    "footerNavAriaLabel": "Liens du footer",
+    "legalNavAriaLabel": "Liens légaux"
+  },
+  "hero": {
+    "badge": "Cabinet d\u2019Expertise & Consulting IA",
+    "h1Line1": "Maîtriser l\u2019IA.",
+    "h1Line2Prefix": "De la Stratégie à l\u2019",
+    "h1Line2Excecution": "Exécution.",
+    "p": "Nous déployons une IA de bout en bout, associant puissance algorithmique souveraine (Soft) et ingénierie de pointe déployée sur le terrain (Hard), pour adresser les défis complexes de l\u2019Afrique.",
+    "forWhoLabel": "Pour qui :",
+    "forWhoInstitutions": "Institutions publiques",
+    "forWhoIndustrialists": "Industriels",
+    "forWhoLogistics": "Logistique & Supply Chain",
+    "forWhoInvestors": "Investisseurs",
+    "ctaWorkshop": "Planifier un atelier IA",
+    "ctaEcosystem": "Explorer l\u2019écosystème du groupe"
+  },
+  "audience": {
+    "heading": "Pour qui nous agissons",
+    "sub": "Identifiez-vous en un coup d\u2019œil dans nos grandes familles de clients.",
+    "items": [
+      {
+        "title": "Institutions & Gouvernance",
+        "desc": "Transformation numérique, politique publique éclairée par la donnée, sécurité souveraine.",
+        "points": ["Analyse prédictive", "Souveraineté des données", "Modélisation économique"],
+        "cta": "Voir comment nous vous aidons",
+        "ariaLabel": "Services pour Institutions & Gouvernance"
+      },
+      {
+        "title": "Industrie & Opérations",
+        "desc": "Maintenance prédictive, optimisation des chaînes de production via l\u2019intelligence Artificielle et la mécatronique.",
+        "points": ["IoT industriel", "Vision par ordinateur", "Edge AI"],
+        "cta": "Voir comment nous vous aidons",
+        "ariaLabel": "Services pour Industrie & Opérations"
+      },
+      {
+        "title": "Logistique & Supply Chain",
+        "desc": "Orchestration en temps réel, flottes informelles et optimisation du dernier kilomètre.",
+        "points": ["Tracking temps réel", "Agents IA", "Optimisation de tournées"],
+        "cta": "Voir comment nous vous aidons",
+        "ariaLabel": "Services pour Logistique & Supply Chain"
+      },
+      {
+        "title": "Investisseurs & Partenaires",
+        "desc": "Due diligence technologique, analyse de marché et déploiement de capitaux stratégiques.",
+        "points": ["Venture Building", "Tech Assessment", "Impact ROI"],
+        "cta": "Voir comment nous vous aidons",
+        "ariaLabel": "Services pour Investisseurs & Partenaires"
+      }
+    ]
+  },
+  "pillars": {
+    "heading": "L\u2019Architecture du Groupe",
+    "sub": "Quatre piliers synergiques où le monde physique rencontre le monde cognitif sous une gouvernance stratégique unifiée.",
+    "exploreLabel": "Explorer le pôle",
+    "ariaLabel": "Explorer le pôle"
+  },
+  "convergence": {
+    "heading": "La Convergence",
+    "headingGold": "Hard & Soft",
+    "kicker": "Ce qui nous différencie des cabinets IA purement logiciels.",
+    "p": "Nous maîtrisons la chaîne de bout en bout. Des algorithmes (Soft) jusqu\u2019à l\u2019infrastructure physique qui les exécute sur le terrain (Hard).",
+    "points": [
+      {"title": "Gouvernance & Sécurité", "desc": "Conformité ISO 42001, souveraineté des données et infrastructures hautement sécurisées."},
+      {"title": "Edge Computing", "desc": "Déploiement de modèles d\u2019IA au plus près de l\u2019action, sans dépendance au cloud."},
+      {"title": "Ingénierie Physique", "desc": "Prototypage rapide, impression 3D et mécatronique via KOF Corporation."}
+    ],
+    "placeholderLabel": "Schéma d\u2019architecture Hard/Soft",
+    "placeholderDesc": "(Diagramme futur illustrant l\u2019intégration du cloud à la mécatronique)"
+  },
+  "impact": {
+    "heading": "Impact à l\u2019Échelle",
+    "sub": "Des solutions déployées pour transformer les secteurs critiques de l\u2019économie africaine.",
+    "approachLabel": "Approche",
+    "impactLabel": "Impact",
+    "cases": [
+      {
+        "pole": "KARABA OS",
+        "title": "Logistique du Dernier Kilomètre",
+        "approach": "Optimisation des tournées et orchestration des flottes informelles via des agents IA intégrés directement dans WhatsApp.",
+        "impact": "Visibilité temps réel unifiée de la supply chain et réduction des retards de livraison."
+      },
+      {
+        "pole": "KOF CORPORATION",
+        "title": "Infrastructures Deeptech",
+        "approach": "Déploiement de serveurs Edge durcis et capteurs IoT intelligents pour le traitement de données en contexte industriel.",
+        "impact": "Maintenance prédictive fiabilisée sans dépendre d\u2019une connexion cloud permanente."
+      },
+      {
+        "pole": "TÉPÉ INTELLIGENCE",
+        "title": "Décisions Stratégiques",
+        "approach": "Construction de jumeaux numériques et analyse institutionnelle pour éclairer les décideurs publics et éducatifs.",
+        "impact": "Allocation budgétaire optimisée et suivi prédictif de l\u2019impact des politiques."
+      }
+    ]
+  },
+  "reach": {
+    "heading": "Réseau",
+    "headingGold": "Opérationnel",
+    "sub": "Une présence d\u2019ingénierie et de conseil ancrée en Afrique, pensée pour s\u2019intégrer aux standards globaux."
+  },
+  "socialProof": {
+    "heading": "L\u2019Exigence de l\u2019État de l\u2019Art",
+    "p": "Nos solutions s\u2019appuient sur les standards technologiques et sécuritaires les plus stricts, garantissant une confiance absolue pour les acteurs critiques.",
+    "standardsTitle": "Standards & Infra",
+    "trustTitle": "Ils nous font confiance",
+    "logos": ["Logo Institution", "Logo Client Industriel", "Logo Partenaire"]
+  },
+  "why": {
+    "heading": "Pourquoi travailler avec",
+    "headingGold": "QUARANTES ?",
+    "sub": "Ce qui fait de QUARANTES un partenaire unique pour vos transformations IA Hard & Soft.",
+    "reasons": [
+      {
+        "title": "Vision Systémique : Afrique & Global",
+        "points": ["Compréhension des dynamiques socio-économiques locales.", "Alignement sur les standards technologiques internationaux.", "Pensé pour les Comités de Direction et décideurs stratégiques."]
+      },
+      {
+        "title": "Du Boardroom au Terrain",
+        "points": ["Stratégie validée en conseil d\u2019administration (Board).", "Exécution opérationnelle garantie et mesurable.", "Déploiement physique des capteurs et de l\u2019infrastructure."]
+      },
+      {
+        "title": "Gouvernance & Conformité",
+        "points": ["Sécurité et éthique de l\u2019IA (ISO 42001) \u2018by design\u2019.", "Sécurisation des données sensibles des institutions.", "Conçu pour répondre aux exigences des comités de gouvernance."]
+      }
+    ]
+  },
+  "access": {
+    "heading": "Accès & Parcours",
+    "sub": "Naviguez au sein de notre écosystème selon votre profil.",
+    "paths": [
+      {"title": "Accès Visiteur & Démo", "desc": "Testez nos sandbox IA, explorez les démos Tépé et Karaba.", "status": "Disponible", "available": true},
+      {"title": "Nous Rejoindre (Carrières)", "desc": "Découvrez nos offres et bâtissez l\u2019avenir avec QUARANTES.", "status": "Ouvert", "available": true},
+      {"title": "Investor Relations", "desc": "Accédez aux rapports financiers et à notre vision stratégique.", "status": "Bientôt disponible", "available": false},
+      {"title": "Documentation API", "desc": "Ressources d\u2019intégration pour les développeurs et partenaires.", "status": "En préparation", "available": false}
+    ]
+  },
+  "insights": {
+    "heroBadge": "Derniers articles",
+    "h1Line1": "Nos Idées,",
+    "h1Gold": "Notre Terrain",
+    "heroSub": "Analyses IA Hard & Soft, retours d\u2019expérience des pôles et regard sur l\u2019économie réelle africaine. Notre infrastructure invisible, expliquée.",
+    "whyPubsHeading": "Pourquoi nos publications",
+    "whyPubsSub": "Une ligne éditoriale au service de la preuve technique, pas du marketing.",
+    "featuredLabel": "À la une",
+    "readTime": "min de lecture",
+    "readArticle": "Lire l\u2019article",
+    "allArticlesHeading": "Tous les articles",
+    "allArticlesSub": "Filtrer par pôle de l\u2019écosystème pour explorer un sujet en profondeur.",
+    "noArticles": "Aucun article dans cette catégorie pour le moment.",
+    "loadMore": "Charger plus d\u2019articles",
+    "articlesListAriaLabel": "Filtrer les articles par pôle",
+    "allFilter": "Tous"
+  },
+  "article": {
+    "home": "Accueil",
+    "insights": "Insights",
+    "tocTitle": "Sommaire",
+    "endCtaHeading": "Envie de contribuer à ces travaux ?",
+    "endCtaP": "Nos publications naissent sur le terrain, mais aussi dans nos laboratoires. Rejoignez un écosystème où l\u2019audace technologique rencontre les réalités du continent africain.",
+    "endCtaBtn": "Rejoindre QUARANTES",
+    "relatedHeading": "Articles liés",
+    "allArticles": "Tous les articles"
+  },
+  "projects": {
+    "eyebrow": "Nos Réalisations",
+    "h1Line1": "Ce que nous avons",
+    "h1Gold": "concrètement construit",
+    "h1Sub": "Là où le blog explique, cette page prouve par les livrables : les réalisations internes des pôles KARABA, KOF Corporation, TÉPÉ et QUARANTES, avec leur niveau de maturité et la méthode qui les a portées.",
+    "statsProjects": "Projets livrés",
+    "statsProjectsDesc": "en production réelle",
+    "statsPoles": "Pôles actifs",
+    "statsPolesDesc": "de l\u2019écosystème",
+    "statsYears": "Années d\u2019exécution",
+    "statsYearsDesc": "de l\u2019état de l\u2019art",
+    "statsCountries": "Pays couverts",
+    "statsCountriesDesc": "déploiements terrain",
+    "framingHeading": "Ce que cette page vous permet d\u2019évaluer",
+    "framingPoints": [
+      {"title": "Faire état de la maturité", "desc": "Chaque statut dit où en est une réalisation : production, pilote, R&D ou archivée."},
+      {"title": "Mesurer la transversalité", "desc": "Du conseil exécutif à la mécatronique, une même chaîne de valeur Soft & Hard."},
+      {"title": "Comprendre notre méthode", "desc": "Les projets phares documentent notre chemin : défi de terrain, approche technique, valeur produite."}
+    ],
+    "gridHeading": "Grille des projets",
+    "gridSub": "Filtrer par pôle. Les projets confidentiels sont signalés comme tels, sans lien externe.",
+    "noProjects": "Aucun projet dans ce pôle pour le moment.",
+    "allFilter": "Tous",
+    "projectsListAriaLabel": "Filtrer les projets par pôle",
+    "featuredHeading": "Projets détaillés",
+    "featuredEyeBrow": "Comment nous procédons",
+    "featuredSub": "Une sélection de réalisations phares, racontées en trois temps : le défi de terrain, l\u2019approche technique et la valeur produite.",
+    "ctaHeading": "Un défi proche de nos réalisations ?",
+    "ctaP": "Chacun de nos projets est né d\u2019un problème de terrain. Parlez-nous du vôtre : nous construirons l\u2019intelligence et l\u2019infrastructure qui l\u2019adressent.",
+    "ctaBtn": "Engager une discussion"
+  },
+  "projectCard": {
+    "confidential": "Confidentiel",
+    "publicResource": "Ressource publique",
+    "internalResource": "Ressource interne",
+    "stackAriaLabel": "Technologies utilisées",
+    "readFullArticle": "Lire l'article complet"
+  },
+  "featuredProjects": {
+    "challenge": "Défi",
+    "approach": "Approche",
+    "value": "Valeur produite",
+    "challengeDesc": "Le problème de terrain à résoudre",
+    "approachDesc": "Notre démarche technique",
+    "valueDesc": "L\u2019impact mesuré sur le terrain"
+  },
+  "careers": {
+    "heroBadge": "Nous recrutons",
+    "h1Line1": "Rejoignez l\u2019",
+    "h1Gold": "Écosystème",
+    "heroSub": "Bâtissez l\u2019infrastructure invisible de l\u2019Afrique. Nous recherchons des esprits brillants pour fusionner le hardware, le software et l\u2019intelligence stratégique.",
+    "whyJoinHeading": "Pourquoi Nous Rejoindre ?",
+    "whyJoinKicker": "Ne vous contentez pas d\u2019écrire du code. Bâtissez l\u2019infrastructure de tout un continent.",
+    "whyJoinPoints": [
+      {
+        "title": "Une Mission Unique :",
+        "p": "Chez QUARANTES, nous ne créons pas de simples applications SaaS. Nous développons le Système d\u2019Exploitation de l\u2019économie réelle africaine. Notre mission est de numériser et d\u2019optimiser les secteurs vitaux et informels qui font battre le cœur du continent."
+      },
+      {
+        "title": "Deeptech d\u2019Avant-Garde :",
+        "p": "Vous travaillerez à la frontière de l\u2019innovation technologique. De la conception de modèles d\u2019IA agentiques (KARABA) à la fabrication de hardware Edge Computing et de mécatronique (KOF Corporation), vous relèverez des défis d\u2019ingénierie inédits."
+      },
+      {
+        "title": "Un Impact Tangible :",
+        "p": "Votre travail aura des répercussions directes et mesurables. Qu\u2019il s\u2019agisse d\u2019optimiser la logistique du dernier kilomètre, d\u2019éclairer les décisions gouvernementales ou de sécuriser des données critiques, vous contribuerez activement à l\u2019essor technologique et économique de l\u2019Afrique."
+      }
+    ],
+    "innovationRadical": "Innovation Radicale",
+    "innovationRadicalDesc": "Rejoignez un écosystème où l\u2019audace technologique rencontre les réalités du terrain africain.",
+    "rdBadge": "Focus R&D",
+    "rdHeading": "Quarantes Studio : L\u2019Avant-Garde de la Recherche",
+    "rdP": "Au sein de Quarantes Studio, notre laboratoire d\u2019innovation, les rôles en Recherche & Développement ne se limitent pas à suivre les tendances : ils les créent.",
+    "rdPoints": [
+      {"title": "IA Agentique :", "p": "Conception d\u2019architectures autonomes capables de prendre des décisions complexes dans des environnements à faible connectivité."},
+      {"title": "Edge AI & Mécatronique :", "p": "Intégration de modèles LLM optimisés directement sur des puces embarquées et prototypage rapide de solutions matérielles."},
+      {"title": "Recherche Fondamentale :", "p": "Publication de papiers de recherche et contribution à l\u2019état de l\u2019art mondial depuis le continent africain."}
+    ],
+    "rdBtn": "Découvrir nos travaux R&D",
+    "cultureHeading": "Notre Culture",
+    "cultureSub": "L\u2019excellence n\u2019est pas une option, c\u2019est notre standard.",
+    "culturePoints": [
+      {"title": "Excellence & Rigueur", "desc": "Nous visons les standards mondiaux. Chaque ligne de code, chaque circuit imprimé doit être irréprochable."},
+      {"title": "Impact Continental", "desc": "Nos solutions transforment l\u2019économie réelle. Vous ne construisez pas un gadget, vous bâtissez l\u2019avenir."},
+      {"title": "Convergence Hard/Soft", "desc": "Nous décloisonnons les disciplines. Les ingénieurs IA travaillent main dans la main avec les experts en mécatronique."}
+    ],
+    "openingsHeading": "Postes Ouverts",
+    "openingsSub": "Découvrez les opportunités au sein de nos différents pôles.",
+    "spontaneous": "Candidature Spontanée",
+    "apply": "Postuler",
+    "processHeading": "Processus de Recrutement",
+    "processSteps": [
+      {"title": "Candidature", "desc": "Dépôt de votre profil et de vos réalisations."},
+      {"title": "Entretien Culturel", "desc": "Rencontre avec nos leaders pour valider l\u2019alignement."},
+      {"title": "Cas Pratique", "desc": "Évaluation technique sur un problème Deeptech réel."},
+      {"title": "Offre", "desc": "Proposition et intégration dans l\u2019écosystème."}
+    ]
+  },
+  "localeSwitcher": {
+    "fr": "🇬🇧 EN → FR",
+    "en": "🇫🇷 FR → EN"
+  },
+  "meta": {
+    "homeTitle": "Cabinet IA Hard & Soft pour l\u2019Afrique",
+    "homeDescription": "QUARANTES Holding — Cabinet d\u2019expertise et consulting IA de bout en bout. Stratégie, Edge Computing, logistique agentique et intelligence institutionnelle pour l\u2019économie africaine.",
+    "insightsTitle": "Insights — Analyses IA Hard & Soft pour l\u2019Afrique",
+    "insightsDescription": "Publications et analyses de QUARANTES Holding : recherches R&D, retours d\u2019expérience des pôles KARABA, KOF Corporation et TÉPÉ, et regards stratégiques sur l\u2019IA appliquée à l\u2019économie réelle africaine.",
+    "projectsTitle": "Nos Projets — Réalisations des pôles QUARANTES",
+    "projectsDescription": "Ce que le groupe QUARANTES a concrètement construit : les réalisations internes des pôles KARABA, KOF Corporation, TÉPÉ et QUARANTES, de la stratégie IA à l\u2019infrastructure Edge.",
+    "careersTitle": "Carrières — Rejoignez l\u2019Écosystème QUARANTES",
+    "careersDescription": "Rejoignez QUARANTES Holding et bâtissez l\u2019infrastructure invisible de l\u2019Afrique. Postes ouverts en IA, Edge Computing, mécatronique et intelligence institutionnelle."
+  },
+  "common": {
+    "minRead": "min"
+  }
+}

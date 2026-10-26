@@ -1,0 +1,18 @@
+# Environnement & builds
+.env*
+.venv/
+venv/
+node_modules/
+.next/
+dist/
+out/
+build/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.tsbuildinfo
+
+# Docs & assets de dev
+docs/
+screen_*.png
+'*
